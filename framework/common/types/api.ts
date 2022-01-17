@@ -1,15 +1,15 @@
 export type ApiFetcherOptions = {
-    url: string,
-    query: string
+  url: string,
+  query: string
 };
 
 export type ApiFetcherResults<T> = {
-    data: T
+  data: T
 };
 
 export interface ApiConfig {
-    apiUrl: string,
-    fetch<T>(
-        options: ApiFetcherOptions
-    ): Promise<ApiFetcherResults<T>>
+  apiUrl: string,
+  fetch<T>(
+    options: ApiFetcherOptions
+  ): Promise<ApiFetcherResults<T>>
 };

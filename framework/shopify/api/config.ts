@@ -2,22 +2,22 @@ import { ApiConfig } from '@common/types/api';
 import { fetchAPI as fetchApi } from '../utils';
 
 class Config {
-    private config: ApiConfig;
+  private config: ApiConfig;
 
-    constructor(config: ApiConfig) {
-        this.config = config;
-    }
+  constructor(config: ApiConfig) {
+    this.config = config;
+  }
 
-    getConfig(): ApiConfig {
-        return this.config;
-    }
+  getConfig(): ApiConfig {
+    return this.config;
+  }
 }
 
 const configWrapper = new Config({
-    apiUrl: 'http://localhost:4000/graphql',
-    fetch: fetchApi
+  apiUrl: 'http://localhost:4000/graphql',
+  fetch: fetchApi
 });
 
 export function getConfig() {
-    return configWrapper.getConfig();
+  return configWrapper.getConfig();
 };
