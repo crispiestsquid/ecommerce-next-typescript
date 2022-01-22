@@ -1,0 +1,13 @@
+.parent {
+  display: flex;
+  flex-direction: row;
+  height: 1500px;
+  justify-content: center;
+}
+
+.child {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin: 1px;
+}
