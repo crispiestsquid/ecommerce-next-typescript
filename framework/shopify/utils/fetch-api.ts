@@ -2,7 +2,8 @@ import { ApiFetcherOptions, ApiFetcherResults } from '@common/types/api';
 
 const fetchAPI = async <T>({
   url,
-  query
+  query,
+  variables
 }: ApiFetcherOptions
 ): Promise<ApiFetcherResults<T>> => {
   const res = await fetch(url, {
@@ -11,7 +12,8 @@ const fetchAPI = async <T>({
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      query: query
+      query,
+      variables
     })
   });
 

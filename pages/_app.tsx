@@ -5,7 +5,7 @@ import { UIProvider } from '@components/ui/context';
 
 const Noop: FC = ({ children }) => <>{ children }</>;
 
-function MyApp({ Component, pageProps }: AppProps & { Component: { Layout: FC } }) {
+export default function MyApp({ Component, pageProps }: AppProps & { Component: { Layout: FC } }) {
   const Layout = Component.Layout ?? Noop;
 
   return (
@@ -16,5 +16,3 @@ function MyApp({ Component, pageProps }: AppProps & { Component: { Layout: FC } 
     </UIProvider>
   );
 }
-
-export default MyApp;
